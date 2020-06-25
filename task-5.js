@@ -6,7 +6,7 @@ const insertedText = () => {
     if(inputName === '') {
         outputName.textContent = 'незнакомец';
     } else {
-        outputName.textContent = inputName.nodeValue;
+        outputName.textContent = inputName.value;
     }
 }
 inputName.addEventListener('input', insertedText)

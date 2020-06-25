@@ -5,4 +5,4 @@ const text = document.querySelector('#text');
 function changeFontSize () {
     text.style.fontSize = `${input.value}px`;
 }
-input.addEventListener('click', changeFontSize)
+input.addEventListener('input', changeFontSize)
