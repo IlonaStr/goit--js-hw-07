@@ -1,13 +1,15 @@
 'use strict';
 
 const input = document.querySelector('#validation-input');
-const validate = () => {
-    if(input.value.length === input.getAttribute('data-length')) {
+input.addEventListener('blur', (e) => {
+    if(input.value.length === Number(input.dataset.length)) {
         input.classList.add('valid');
-        input.classList.remove('invalid')
     } else {
-        input.classList.remove('valid');
         input.classList.add('invalid');
     }   
-}
-input.addEventListener('blur', validate)
+})
+
+input.addEventListener('focus', (e) =>{
+    input.classList.remove('valid');
+    input.classList.remove('invalid')
+})
