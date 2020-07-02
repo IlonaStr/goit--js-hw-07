@@ -18,8 +18,16 @@ const images = [
     },
   ];
 
-  const gallery = document.querySelector('#gallery');
+  const gallery = document.querySelector('ul#gallery');
   const galleryItem = images.map(function({url, alt}) {
-      return `<li class = 'list__item><img src = '${url}' alt = '${alt}'></li>`
+      return `<li class = "list__item"><img src = "${url}" alt = "${alt}"></li>`
   }).join('');
   gallery.insertAdjacentHTML('afterbegin', `${galleryItem}`)
+
+//   const gallery = document.querySelector('ul#gallery');
+
+// const galleryItem = images.map(function ({url, alt}) {
+//     return `<li class="list__item"><img src="${url}" alt="${alt}"></li>`;
+// }).join("");
+
+// gallery.insertAdjacentHTML('afterbegin', `${galleryItem}`);
